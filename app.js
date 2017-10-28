@@ -18,7 +18,8 @@ var express = require('express'),
 
 // seedDB(); // seed the database
 mongoose.Promise = global.Promise;
-mongoose.connect("mongodb://localhost/yelp_camp", { useMongoClient: true });
+// mongoose.connect("mongodb://localhost/yelp_camp", { useMongoClient: true });
+mongoose.connect("mongodb://team:password@ds237855.mlab.com:37855/my_yelpcamp", { useMongoClient: true });
 
 app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({ extended: true }));
